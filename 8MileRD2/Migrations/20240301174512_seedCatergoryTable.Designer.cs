@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using _8MileRD2.Data;
 
@@ -10,9 +11,11 @@ using _8MileRD2.Data;
 namespace _8MileRD2.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240301174512_seedCatergoryTable")]
+    partial class seedCatergoryTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,7 +41,7 @@ namespace _8MileRD2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categoies", (string)null);
+                    b.ToTable("Categoies");
 
                     b.HasData(
                         new
