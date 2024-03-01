@@ -11,6 +11,6 @@ namespace _8MileRD2.Data
         }
 
         public DbSet<Category> Categoies { get; set; }
-        public DbSet<David> Davids { get; set; }
+        
     }
 }
