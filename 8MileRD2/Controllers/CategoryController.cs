@@ -22,7 +22,7 @@ namespace _8MileRD2.Controllers
         [HttpPost]
         public IActionResult Create(Category obj)
         {
-            if(obj.Name!=null)
+            if (obj.Name != null)
                 if (obj.Name.ToLower() == obj.DisplayOrder.ToString().ToLower())
                     ModelState.AddModelError("DisplayOrder", "Ne mozete imati isto ime i broj");
 
@@ -34,6 +34,15 @@ namespace _8MileRD2.Controllers
             }
             else
                 return View();
+        }
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+                return NotFound();
+            Category category = _db.Categoies.Find(id);
+            if (category == null)
+                return NotFound();
+            return View(category);
         }
     }
 }
