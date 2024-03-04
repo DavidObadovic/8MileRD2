@@ -35,6 +35,18 @@ namespace _8MileRD2.Controllers
             else
                 return View();
         }
+
+        [HttpPost]
+        public IActionResult Save(Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Categoies.Update(category);
+                _db.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+        [ActionName("Save")]
         public IActionResult Edit(int? id)
         {
             if (id == null || id == 0)
@@ -45,16 +57,7 @@ namespace _8MileRD2.Controllers
             return View(category);
         }
 
-        [HttpPost]
-        public IActionResult Edit(Category category)
-        {
-            if (ModelState.IsValid)
-            {
-                _db.Categoies.Update(category);
-                _db.SaveChanges();
-            }
-            return RedirectToAction("Index");
-        }
+        
 
         public IActionResult Delete(int? id)
         {
