@@ -44,5 +44,39 @@ namespace _8MileRD2.Controllers
                 return NotFound();
             return View(category);
         }
+
+        [HttpPost]
+        public IActionResult Edit(Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Categoies.Update(category);
+                _db.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+                return NotFound();
+            Category category = _db.Categoies.Find(id);
+            if (category == null)
+                return NotFound();
+            return View(category);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeletePost(int? id)
+        {
+            Category? obj = _db.Categoies.Find(id);
+            if (obj == null)
+                return NotFound();
+
+            _db.Categoies.Remove(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
