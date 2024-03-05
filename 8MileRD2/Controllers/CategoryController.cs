@@ -1,5 +1,6 @@
-﻿using _8MileRD2.Data;
-using _8MileRD2.Models;
+﻿
+using _8MileRD.Models;
+using _8MileRD2.DataAccess.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _8MileRD2.Controllers

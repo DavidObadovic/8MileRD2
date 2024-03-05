@@ -2,20 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using _8MileRD2.Data;
+using _8MileRD2.DataAccess.Data;
 
 #nullable disable
 
-namespace _8MileRD2.Migrations
+namespace _8MileRD2.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240301174512_seedCatergoryTable")]
-    partial class seedCatergoryTable
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +38,7 @@ namespace _8MileRD2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categoies");
+                    b.ToTable("Categoies", (string)null);
 
                     b.HasData(
                         new

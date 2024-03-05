@@ -1,8 +1,8 @@
-﻿using _8MileRD2.Models;
+﻿using _8MileRD.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace _8MileRD2.Data
+namespace _8MileRD2.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {

@@ -1,4 +1,5 @@
-using _8MileRD2.Data;
+
+using _8MileRD2.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

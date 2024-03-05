@@ -135,3 +135,7 @@ D:\Projekti\8MileRD2\8MileRD2\obj\Debug\net8.0\refint\8MileRD2.dll
 D:\Projekti\8MileRD2\8MileRD2\obj\Debug\net8.0\8MileRD2.pdb
 D:\Projekti\8MileRD2\8MileRD2\obj\Debug\net8.0\8MileRD2.genruntimeconfig.cache
 D:\Projekti\8MileRD2\8MileRD2\obj\Debug\net8.0\ref\8MileRD2.dll
+D:\Projekti\8MileRD2\8MileRD2\bin\Debug\net8.0\8MileRD.DataAccess.dll
+D:\Projekti\8MileRD2\8MileRD2\bin\Debug\net8.0\8MileRD.Models.dll
+D:\Projekti\8MileRD2\8MileRD2\bin\Debug\net8.0\8MileRD.DataAccess.pdb
+D:\Projekti\8MileRD2\8MileRD2\bin\Debug\net8.0\8MileRD.Models.pdb

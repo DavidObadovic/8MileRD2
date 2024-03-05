@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace _8MileRD2.Migrations
+namespace _8MileRD2.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class addCategoryTableToDb : Migration

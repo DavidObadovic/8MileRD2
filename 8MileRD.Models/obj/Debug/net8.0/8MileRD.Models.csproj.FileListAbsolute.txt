@@ -1,0 +1,12 @@
+D:\Projekti\8MileRD2\8MileRD.Models\bin\Debug\net8.0\8MileRD.Models.deps.json
+D:\Projekti\8MileRD2\8MileRD.Models\bin\Debug\net8.0\8MileRD.Models.dll
+D:\Projekti\8MileRD2\8MileRD.Models\bin\Debug\net8.0\8MileRD.Models.pdb
+D:\Projekti\8MileRD2\8MileRD.Models\obj\Debug\net8.0\8MileRD.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekti\8MileRD2\8MileRD.Models\obj\Debug\net8.0\8MileRD.Models.AssemblyInfoInputs.cache
+D:\Projekti\8MileRD2\8MileRD.Models\obj\Debug\net8.0\8MileRD.Models.AssemblyInfo.cs
+D:\Projekti\8MileRD2\8MileRD.Models\obj\Debug\net8.0\8MileRD.Models.csproj.CoreCompileInputs.cache
+D:\Projekti\8MileRD2\8MileRD.Models\obj\Debug\net8.0\8MileRD.Models.sourcelink.json
+D:\Projekti\8MileRD2\8MileRD.Models\obj\Debug\net8.0\8MileRD.Models.dll
+D:\Projekti\8MileRD2\8MileRD.Models\obj\Debug\net8.0\refint\8MileRD.Models.dll
+D:\Projekti\8MileRD2\8MileRD.Models\obj\Debug\net8.0\8MileRD.Models.pdb
+D:\Projekti\8MileRD2\8MileRD.Models\obj\Debug\net8.0\ref\8MileRD.Models.dll

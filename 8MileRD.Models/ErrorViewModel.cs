@@ -1,4 +1,4 @@
-namespace _8MileRD2.Models
+namespace _8MileRD.Models
 {
     public class ErrorViewModel
     {

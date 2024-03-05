@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace _8MileRD2.Models
+namespace _8MileRD.Models
 {
     public class Category
     {
@@ -12,7 +12,7 @@ namespace _8MileRD2.Models
         [DisplayName("Category Name")]
         public string Name { get; set; }
         [DisplayName("Display Order")]
-        [Range(1,100,ErrorMessage ="Broj mora biti u opsegu od 1 do 100")]
+        [Range(1, 100, ErrorMessage = "Broj mora biti u opsegu od 1 do 100")]
         public int DisplayOrder { get; set; }
     }
 }
