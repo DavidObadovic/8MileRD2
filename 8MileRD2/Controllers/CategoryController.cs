@@ -1,4 +1,5 @@
-﻿
+﻿using _8MileRD.DataAccess.Repository;
+using _8MileRD.DataAccess.Repository.IRepository;
 using _8MileRD.Models;
 using _8MileRD2.DataAccess.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -7,12 +8,12 @@ namespace _8MileRD2.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public CategoryController(ApplicationDbContext db) => this._db = db;
+        private readonly ICategoryRepository _db;
+        public CategoryController(ICategoryRepository db) => this._db = db;
 
         public IActionResult Index()
         {
-            List<Category> categories = _db.Categoies.ToList();
+            List<Category> categories = _db.GetAll().ToList();
             return View(categories);
         }
 
@@ -29,8 +30,8 @@ namespace _8MileRD2.Controllers
 
             if (ModelState.IsValid)
             {
-                _db.Categoies.Add(obj);
-                _db.SaveChanges();
+                _db.Add(obj);
+                _db.Save();
                 return RedirectToAction("Index");
             }
             else
@@ -42,8 +43,8 @@ namespace _8MileRD2.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Categoies.Update(category);
-                _db.SaveChanges();
+                _db.Update(category);
+                _db.Save();
             }
             return RedirectToAction("Index");
         }
@@ -52,19 +53,17 @@ namespace _8MileRD2.Controllers
         {
             if (id == null || id == 0)
                 return NotFound();
-            Category category = _db.Categoies.Find(id);
+            Category category = _db.get(u=>u.Id==id);
             if (category == null)
                 return NotFound();
             return View(category);
         }
 
-        
-
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
                 return NotFound();
-            Category category = _db.Categoies.Find(id);
+            Category category = _db.get(u => u.Id == id);
             if (category == null)
                 return NotFound();
             return View(category);
@@ -73,12 +72,12 @@ namespace _8MileRD2.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePost(int? id)
         {
-            Category? obj = _db.Categoies.Find(id);
+            Category? obj = _db.get(u => u.Id == id);
             if (obj == null)
                 return NotFound();
 
-            _db.Categoies.Remove(obj);
-            _db.SaveChanges();
+            _db.Remove(obj);
+            _db.Save();
             return RedirectToAction("Index");
         }
 

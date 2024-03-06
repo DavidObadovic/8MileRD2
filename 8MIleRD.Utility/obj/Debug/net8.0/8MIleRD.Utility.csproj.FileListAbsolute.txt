@@ -1,0 +1,12 @@
+D:\Projekti\8MileRD2\8MIleRD.Utility\bin\Debug\net8.0\8MIleRD.Utility.deps.json
+D:\Projekti\8MileRD2\8MIleRD.Utility\bin\Debug\net8.0\8MIleRD.Utility.dll
+D:\Projekti\8MileRD2\8MIleRD.Utility\bin\Debug\net8.0\8MIleRD.Utility.pdb
+D:\Projekti\8MileRD2\8MIleRD.Utility\obj\Debug\net8.0\8MIleRD.Utility.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekti\8MileRD2\8MIleRD.Utility\obj\Debug\net8.0\8MIleRD.Utility.AssemblyInfoInputs.cache
+D:\Projekti\8MileRD2\8MIleRD.Utility\obj\Debug\net8.0\8MIleRD.Utility.AssemblyInfo.cs
+D:\Projekti\8MileRD2\8MIleRD.Utility\obj\Debug\net8.0\8MIleRD.Utility.csproj.CoreCompileInputs.cache
+D:\Projekti\8MileRD2\8MIleRD.Utility\obj\Debug\net8.0\8MIleRD.Utility.sourcelink.json
+D:\Projekti\8MileRD2\8MIleRD.Utility\obj\Debug\net8.0\8MIleRD.Utility.dll
+D:\Projekti\8MileRD2\8MIleRD.Utility\obj\Debug\net8.0\refint\8MIleRD.Utility.dll
+D:\Projekti\8MileRD2\8MIleRD.Utility\obj\Debug\net8.0\8MIleRD.Utility.pdb
+D:\Projekti\8MileRD2\8MIleRD.Utility\obj\Debug\net8.0\ref\8MIleRD.Utility.dll

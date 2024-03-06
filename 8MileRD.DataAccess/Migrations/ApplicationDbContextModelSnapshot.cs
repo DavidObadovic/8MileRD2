@@ -7,7 +7,7 @@ using _8MileRD2.DataAccess.Data;
 
 #nullable disable
 
-namespace _8MileRD2.DataAccess.Migrations
+namespace _8MileRD.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -21,7 +21,7 @@ namespace _8MileRD2.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("_8MileRD2.Models.Category", b =>
+            modelBuilder.Entity("_8MileRD.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,11 +34,12 @@ namespace _8MileRD2.DataAccess.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categoies", (string)null);
+                    b.ToTable("Categoies");
 
                     b.HasData(
                         new
