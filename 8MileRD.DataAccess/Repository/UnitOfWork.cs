@@ -1,26 +1,27 @@
 ﻿using _8MileRD.DataAccess.Repository.IRepository;
 using _8MileRD.Models;
 using _8MileRD2.DataAccess.Data;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace _8MileRD.DataAccess.Repository
 {
-    public class CategoryRepository : Repository<Category>, ICategoryRepository
+    public class UnitOfWork : IUnitOfWork
     {
+        public ICategoryRepository categoryRepository { get; private set; }
         private ApplicationDbContext _db;
-        public CategoryRepository(ApplicationDbContext db) : base(db)
+        public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
+            categoryRepository = new CategoryRepository(db);
         }
-
-        
-        public void Update(Category obj) => _db.Categoies.Update(obj);
-
+        public void Save()
+        {
+            _db.SaveChanges();
+        }
     }
 }

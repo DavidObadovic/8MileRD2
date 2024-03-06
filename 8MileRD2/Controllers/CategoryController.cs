@@ -8,12 +8,12 @@ namespace _8MileRD2.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ICategoryRepository _db;
-        public CategoryController(ICategoryRepository db) => this._db = db;
+        private readonly IUnitOfWork _db;
+        public CategoryController(IUnitOfWork db) => this._db = db;
 
         public IActionResult Index()
         {
-            List<Category> categories = _db.GetAll().ToList();
+            List<Category> categories = _db.categoryRepository.GetAll().ToList();
             return View(categories);
         }
 
@@ -30,7 +30,7 @@ namespace _8MileRD2.Controllers
 
             if (ModelState.IsValid)
             {
-                _db.Add(obj);
+                _db.categoryRepository.Add(obj);
                 _db.Save();
                 return RedirectToAction("Index");
             }
@@ -43,7 +43,7 @@ namespace _8MileRD2.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Update(category);
+                _db.categoryRepository.Update(category);
                 _db.Save();
             }
             return RedirectToAction("Index");
@@ -53,7 +53,7 @@ namespace _8MileRD2.Controllers
         {
             if (id == null || id == 0)
                 return NotFound();
-            Category category = _db.get(u=>u.Id==id);
+            Category category = _db.categoryRepository.get(u=>u.Id==id);
             if (category == null)
                 return NotFound();
             return View(category);
@@ -63,7 +63,7 @@ namespace _8MileRD2.Controllers
         {
             if (id == null || id == 0)
                 return NotFound();
-            Category category = _db.get(u => u.Id == id);
+            Category category = _db.categoryRepository.get(u => u.Id == id);
             if (category == null)
                 return NotFound();
             return View(category);
@@ -72,11 +72,11 @@ namespace _8MileRD2.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePost(int? id)
         {
-            Category? obj = _db.get(u => u.Id == id);
+            Category? obj = _db.categoryRepository.get(u => u.Id == id);
             if (obj == null)
                 return NotFound();
 
-            _db.Remove(obj);
+            _db.categoryRepository.Remove(obj);
             _db.Save();
             return RedirectToAction("Index");
         }
